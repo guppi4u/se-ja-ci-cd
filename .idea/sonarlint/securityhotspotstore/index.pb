@@ -9,3 +9,6 @@ L
 src/main/java/LoginTest.java,e/c/ece07661988b82e184bc91c9a9491b15cbb285d5
 G
 logs/test-execution.log,5/b/5befa7053174fba9b51150fd3d01e34f878bcb56
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
