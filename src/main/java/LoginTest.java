@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.time.Duration;
 
@@ -16,10 +19,21 @@ public class LoginTest {
         // Set WebDriver path
         WebDriverManager.chromedriver().setup();
 
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--window-size=1920x1080");
+        WebDriver driver = new ChromeDriver(options);
+
         // Instantiate WebDriver (e.g., ChromeDriver)
-        WebDriver driver = new ChromeDriver();
+       // WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
+
+        /*FirefoxOptions options = new FirefoxOptions();
+        options.addArguments("--headless");
+        WebDriver driver = new FirefoxDriver(options); */
+
 
         try {
             // Log an info message
